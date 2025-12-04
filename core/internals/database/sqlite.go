@@ -29,3 +29,7 @@ func NewDatabase(path string) (*Database, error){
 	fmt.Printf("Database initialized.")
 	return &Database{conn: db},nil
 }
+
+func (db *Database) Close(){
+	db.conn.Close()
+}

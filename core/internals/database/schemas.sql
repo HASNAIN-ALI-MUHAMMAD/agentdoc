@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS documents (
     id TEXT PRIMARY KEY,           -- UUID
     filename TEXT NOT NULL,
     filepath TEXT NOT NULL,
-    file_type TEXT NOT NULL CHECK(file_type IN ('pdf', 'doc', 'docx', 'txt', 'md')),
-    last_read DATETIME,
+    file_type TEXT NOT NULL,
+    last_read DATETIME DEFAULT CURRENT_TIMESTAMP,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     
     total_pages INTEGER DEFAULT 0,

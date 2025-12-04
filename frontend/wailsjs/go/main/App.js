@@ -5,3 +5,7 @@
 export function Get_Documents() {
   return window['go']['main']['App']['Get_Documents']();
 }
+
+export function SelectFile() {
+  return window['go']['main']['App']['SelectFile']();
+}
